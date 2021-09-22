@@ -8,6 +8,7 @@
  */
 function greet(name) {
   // Your code here
+  console.log(`Hello ${name}`)
 }
 
 /**
@@ -21,6 +22,7 @@ function greet(name) {
  */
 function isOdd(n) {
   // Your code here
+  return Boolean(n%2)
 }
 
 /**
@@ -32,8 +34,14 @@ function isOdd(n) {
  * oddsSmallerThan(7) -> 3
  * oddsSmallerThan(15) -> 7
  */
+ let counter = 0
 function oddsSmallerThan(n) {
-  // Your code here
+  
+  return parseInt(n/2);
+  // with recursion 
+  //if (isOdd(n)) counter++;
+  //if (n === 1) return counter
+  //return oddsSmallerThan(n-1)
 }
 
 /**
@@ -48,6 +56,8 @@ function oddsSmallerThan(n) {
  */
 function squareOrDouble(n) {
   // Your code here
+  if (isOdd(n)) return n*n
+  else return n*2
 }
 
 module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
